@@ -54,10 +54,10 @@ Escrevas um programa em Kotlin que receba dois números e mostre o maior.
 */
 
 fun mostrarMaior(first: Int, second: Int): Int? {
-    when {
-        first > second -> return first
-        first < second -> return second
-        else -> return null
+    return when {
+        first > second -> first
+        first < second -> second
+        else -> null
     }
 }
 
@@ -74,11 +74,11 @@ Média aritmética igual ou maior que 7,0 e menor do que 10,0, exibir a mensagem
 fun calcularAprovacao(nota1: Double, nota2: Double, nota3: Double): String {
     val total = (nota1 + nota2 + nota3) / 3
 
-    when {
-        total < 3.0 -> return "REPROVADO"
-        total < 7.0 -> return "EXAME"
-        total >= 7.0 -> return "APROVADO"
-        else -> return "Nota inválida"
+    return when {
+        total < 3.0 -> "REPROVADO"
+        total < 7.0 -> "EXAME"
+        total >= 7.0 -> "APROVADO"
+        else -> "Nota inválida"
     }
 }
 
