@@ -12,15 +12,15 @@ fun main() {
 
     // Ex 3
     println("Mostrar Maior: ")
-    println(mostrarMaior(1,2))
-    println(mostrarMaior(4,3))
-    println(mostrarMaior(5,5))
+    println(mostrarMaior(1, 2))
+    println(mostrarMaior(4, 3))
+    println(mostrarMaior(5, 5))
 
     // Ex 4
     println("Calcular aprovação: ")
     println(calcularAprovacao(2.0, 3.0, 4.0))
     println(calcularAprovacao(1.0, 2.0, 3.0))
-    println(calcularAprovacao(7.0,7.0,7.0))
+    println(calcularAprovacao(7.0, 7.0, 7.0))
 
 }
 
@@ -40,7 +40,7 @@ sem se preocupar com a altura da pessoa. Todas as medidas fornecidas devem estar
 */
 
 fun calcularAltura(alturaDegrau: Double, alturaDesejada: Double): Int {
-    var quantidadeDegraus: Int = 0
+    var quantidadeDegraus = 0
     while (alturaDegrau * quantidadeDegraus < alturaDesejada) {
         quantidadeDegraus++
     }
@@ -54,10 +54,9 @@ Escrevas um programa em Kotlin que receba dois números e mostre o maior.
 */
 
 fun mostrarMaior(first: Int, second: Int): Int? {
-    return when {
+    when {
         first > second -> return first
         first < second -> return second
-        first === second -> return null
         else -> return null
     }
 }
@@ -75,7 +74,7 @@ Média aritmética igual ou maior que 7,0 e menor do que 10,0, exibir a mensagem
 fun calcularAprovacao(nota1: Double, nota2: Double, nota3: Double): String {
     val total = (nota1 + nota2 + nota3) / 3
 
-    return when {
+    when {
         total < 3.0 -> return "REPROVADO"
         total < 7.0 -> return "EXAME"
         total >= 7.0 -> return "APROVADO"
