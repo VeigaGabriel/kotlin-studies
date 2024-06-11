@@ -5,51 +5,53 @@
         <item name="colorAccent">#FF0000</item>
     </style>
 
-<!--    // Default theme-->
-<!--    <style name="DefaultAll" parent="DefaultTheme">-->
-<!--        <item name="android:textColor">#FF00FF</item>-->
+<!--&lt;!&ndash;    // Default theme&ndash;&gt;-->
+<!--&lt;!&ndash;    <style name="DefaultAll" parent="DefaultTheme">&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="android:textColor">#FF00FF</item>&ndash;&gt;-->
 
-<!--    </style>-->
-    <style name="Widget.AppCompat.Button" parent="DefaultTheme">
-        <item name="android:backgroundTint">@color/default4</item>
-        <item name="android:textAlignment">center</item>
-<!--        <item name="android:padding">8dp</item>-->
-    </style>
-    <style name="Widget.AppCompat.TextView" parent="DefaultTheme">
-        <item name="android:textColor">@color/default5</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textStyle">bold</item>
-<!--        <item name="android:padding">8dp</item>-->
-    </style>
-<!-- Input -->
-<!--    <style name="Widget.Material3.TextInputLayout.OutlinedBox" parent="DefaultTheme">-->
-<!--        <item name="android:textColorHint">@color/default3</item>-->
-<!--        <item name="hintTextColor">@color/default5</item>-->
-<!--        <item name="boxStrokeColor">@color/default4</item>-->
-<!--        <item name="cursorColor">@color/default4</item>-->
+<!--&lt;!&ndash;    </style>&ndash;&gt;-->
+<!--    <style name="Widget.AppCompat.Button" parent="DefaultTheme">-->
+<!--        <item name="android:backgroundTint">@color/default4</item>-->
+<!--        <item name="android:textAlignment">center</item>-->
+<!--&lt;!&ndash;        <item name="android:padding">8dp</item>&ndash;&gt;-->
 <!--    </style>-->
 
-    <style name="Base.Widget.Material3.CardView" parent="DefaultTheme" tools:ignore="PrivateResource">
-<!--        <item name="android:backgroundTint">#5C637370</item>-->
-        <item name="android:backgroundTint">#5c637380</item>
-<!--        <item name="cardBackgroundColor">#FF00FF</item>-->
-    </style>
-
-    <style name="Base.ThemeOverlay.Material3.TextInputEditText" parent="DefaultTheme" tools:ignore="PrivateResource">
-        <item name="android:textColor">@color/default5</item>
-        <item name="android:textColorHighlight">@color/default3</item>
-    </style>
-    <style name="Widget.AppCompat.RatingBar" parent="Base.Widget.AppCompat.RatingBar">
-        <item name="android:progressTint">@color/default5</item>
-        <item name="android:numStars">1</item>
-<!--        <item name="android:padding">8dp</item>-->
-    </style>
-
-
-<!--    <style name="Theme1" parent="Theme.AppCompat.Light.DarkActionBar">-->
-<!--        <item name="colorPrimary">#212121</item>-->
-<!--        <item name="colorPrimaryDark">#000000</item>-->
-<!--        <item name="colorAccent">#30E57E</item>-->
+<!--    <style name="Widget.AppCompat.TextView" parent="DefaultTheme">-->
+<!--        <item name="android:textColor">@color/default5</item>-->
+<!--        <item name="android:textAlignment">center</item>-->
+<!--        <item name="android:textStyle">bold</item>-->
+<!--&lt;!&ndash;        <item name="android:padding">8dp</item>&ndash;&gt;-->
 <!--    </style>-->
+
+<!--    <style name="Base.Widget.Material3.CardView" parent="DefaultTheme" tools:ignore="PrivateResource">-->
+<!--        &lt;!&ndash;        <item name="android:backgroundTint">#5C637370</item>&ndash;&gt;-->
+<!--        <item name="android:backgroundTint">#5c637380</item>-->
+<!--        &lt;!&ndash;        <item name="cardBackgroundColor">#FF00FF</item>&ndash;&gt;-->
+<!--    </style>-->
+
+<!--&lt;!&ndash; Input &ndash;&gt;-->
+<!--&lt;!&ndash;    <style name="Widget.Material3.TextInputLayout.OutlinedBox" parent="DefaultTheme">&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="android:textColorHint">@color/default3</item>&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="hintTextColor">@color/default5</item>&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="boxStrokeColor">@color/default4</item>&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="cursorColor">@color/default4</item>&ndash;&gt;-->
+<!--&lt;!&ndash;    </style>&ndash;&gt;-->
+
+<!--    <style name="Base.ThemeOverlay.Material3.TextInputEditText" parent="DefaultTheme" tools:ignore="PrivateResource">-->
+<!--        <item name="android:textColor">@color/default5</item>-->
+<!--        <item name="android:textColorHighlight">@color/default3</item>-->
+<!--    </style>-->
+<!--    <style name="Widget.AppCompat.RatingBar" parent="Base.Widget.AppCompat.RatingBar">-->
+<!--        <item name="android:progressTint">@color/default5</item>-->
+<!--        <item name="android:numStars">1</item>-->
+<!--&lt;!&ndash;        <item name="android:padding">8dp</item>&ndash;&gt;-->
+<!--    </style>-->
+
+
+<!--&lt;!&ndash;    <style name="Theme1" parent="Theme.AppCompat.Light.DarkActionBar">&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="colorPrimary">#212121</item>&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="colorPrimaryDark">#000000</item>&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="colorAccent">#30E57E</item>&ndash;&gt;-->
+<!--&lt;!&ndash;    </style>&ndash;&gt;-->
 
 </resources>
