@@ -41,6 +41,7 @@ dependencies {
 
     // Material Design 3
     implementation libs.material
+    implementation libs.androidx.preference.ktx
 
     // Testing
     testImplementation libs.junit
