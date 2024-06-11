@@ -5,13 +5,13 @@
     android:orientation="vertical"
     android:padding="8dp">
 
-    <TextView        android:id="@+id/movieTitle"
+    <TextView android:id="@+id/old_movieTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <TextView        android:id="@+id/movieDirector"
+    <TextView        android:id="@+id/old_movieDirector"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="14sp" />

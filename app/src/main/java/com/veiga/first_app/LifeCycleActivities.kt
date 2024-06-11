@@ -1,12 +1,15 @@
 package com.veiga.first_app
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.veiga.first_app.common.MoviesDatabase
+import com.veiga.first_app.domain.movie.Movie
+import com.veiga.first_app.domain.movie.MovieAdapter
 
 class LifeCycleActivities : AppCompatActivity(), ClickEventListener {
     private val recyclerView:RecyclerView by lazy { findViewById(R.id.recycler_view) }
@@ -27,22 +30,16 @@ class LifeCycleActivities : AppCompatActivity(), ClickEventListener {
 //        }
 
         val adapter = MovieAdapter(movieList, this)
-
         recyclerView.adapter = adapter
-//        recyclerView.layoutManager = LinearLayoutManager(baseContext)
+        recyclerView.layoutManager = LinearLayoutManager(baseContext)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onItemClick(position: Int) {
         val movie = movieList[position]
 //        Toast.makeText(this, movie.title, Toast.LENGTH_SHORT).show()
         itemSelectedText.text = "Filme:${movie.title} | Diretor: ${movie.director}"
     }
-
-
 }
 
-    val movieList = listOf(
-        Movie("Alien", "Ridley Scott"),
-        Movie("La La Land", "Damien Chazelle"),
-        Movie("Nomadland", "Chloe Zhao"),
-    )
+val movieList = MoviesDatabase.getMovies()
