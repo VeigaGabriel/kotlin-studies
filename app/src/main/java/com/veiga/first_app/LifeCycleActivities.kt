@@ -5,15 +5,19 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.veiga.first_app.common.MoviesDatabase
-import com.veiga.first_app.domain.movie.Movie
 import com.veiga.first_app.domain.movie.MovieAdapter
+import com.veiga.first_app.domain.movie.MovieItemListener
 
-class LifeCycleActivities : AppCompatActivity(), ClickEventListener {
+class LifeCycleActivities : AppCompatActivity(), MovieItemListener {
     private val recyclerView:RecyclerView by lazy { findViewById(R.id.recycler_view) }
     private val itemSelectedText:TextView by lazy { findViewById(R.id.item_selected) }
+
+    private val movieList = MoviesDatabase.getMovies()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,15 +27,19 @@ class LifeCycleActivities : AppCompatActivity(), ClickEventListener {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
 
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-//            insets
-//        }
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         val adapter = MovieAdapter(movieList, this)
-        recyclerView.adapter = adapter
+
+        // adapter.setPlanetListener
+
         recyclerView.layoutManager = LinearLayoutManager(baseContext)
+        recyclerView.adapter = adapter
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -42,4 +50,3 @@ class LifeCycleActivities : AppCompatActivity(), ClickEventListener {
     }
 }
 
-val movieList = MoviesDatabase.getMovies()
