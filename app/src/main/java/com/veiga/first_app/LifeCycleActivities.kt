@@ -29,6 +29,7 @@ class LifeCycleActivities : AppCompatActivity(), ClickEventListener {
         val adapter = MovieAdapter(movieList, this)
 
         recyclerView.adapter = adapter
+//        recyclerView.layoutManager = LinearLayoutManager(baseContext)
     }
 
     override fun onItemClick(position: Int) {
